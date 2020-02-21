@@ -91,6 +91,3 @@ if __name__ == "__main__":
     accuracy,xent = evaluate_graph(*sys.argv[1:])
     print('Accuracy: %g' % accuracy)
     print('Cross Entropy: %g' % xent)
-
-    
-  
