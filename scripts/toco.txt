@@ -1,4 +1,4 @@
 --Convert your .pb files to .lite files--
 --Get names of input_arrays and output_arrays from code provided--
 
-tflite_convert \ --output_file=F:/new_img/sign/optimized_graph.lite \ --graph_def_file=F:/new_img/sign/retrained_graph.pb \ --input_arrays=Mul \ --output_arrays=final_array
+tflite_convert \ --output_file=F:/new_img/sign/optimized_graph.tflite \ --graph_def_file=F:/new_img/sign/retrained_graph.pb \ --input_arrays=Mul \ --output_arrays=final_result
