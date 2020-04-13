@@ -2,3 +2,10 @@
 --Get names of input_arrays and output_arrays from code provided--
 
 tflite_convert \ --output_file=F:/new_img/sign/optimized_graph.tflite \ --graph_def_file=F:/new_img/sign/retrained_graph.pb \ --input_arrays=Mul \ --output_arrays=final_result
+
+
+
+bazel run --config=opt tensorflow/lite/toco:toco -- \--input_file=F:/new_img/sign/retrained_graph.pb \ --output_file=F:/new_img/sign/detect.tflite \ --input_shapes=1,300,300,3 \ --input_arrays=normalized_input_image_tensor \ --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' \ --inference_type=QUANTIZED_UINT8 \ --mean_values=128 \ --std_values=128 \ --change_concat_input_ranges=false \ --allow_custom_ops
+
+
+tflite_convert \ --output_file=F:/new_img/sign2/optimized_graph.tflite \ --graph_def_file=F:\new_img\sign2\saved_graph.pb \ --input_arrays=Placeholder \ --output_arrays=final_result
