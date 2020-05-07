@@ -9,3 +9,9 @@ bazel run --config=opt tensorflow/lite/toco:toco -- \--input_file=F:/new_img/sig
 
 
 tflite_convert \ --output_file=F:/new_img/sign2/optimized_graph.tflite \ --graph_def_file=F:\new_img\sign2\saved_graph.pb \ --input_arrays=Placeholder \ --output_arrays=final_result
+
+
+tflite_convert \ --output_file=F:/new_img/signxx1/model.tflite \ --graph_def_file=F:/new_img/signxx1/ \ --input_arrays=Placeholder \ --output_arrays=final_result
+
+tflite_convert \ --saved_model_dir=C:/Users/Kaiwalya/Desktop/signxx1/ \ --output_file=C:/Users/Kaiwalya/Desktop/signxx1/model.tflite \ --input_arrays=Placeholder \ --output_arrays=final_result
+
